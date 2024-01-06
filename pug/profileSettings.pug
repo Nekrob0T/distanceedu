@@ -1,0 +1,27 @@
+html(lang="uk")
+    include ./includes/head.pug
+    body
+        h1 Налаштування
+        .container
+            .col-lg-6.offset-lg-3.col-8.offset-2
+                .form
+                    .form-group
+                        p(style="display: inline-block;") Ім'я:
+                            input.form-control(type="text", id="name", placeholder="Іван")
+                        p(style="display: inline-block;") Прізвище:
+                            input.form-control(type="text", id="surname", placeholder="Ткаченко")
+                    .form-group
+                        p(style="display: inline-block;") Країна:
+                            input.form-control(type="text", id="country", placeholder="Україна")
+                        p(style="display: inline-block;") Місто:
+                            input.form-control(type="text", id="city", placeholder="Львів")
+                    .form-group
+                        p(style="display: inline-block;") Пошта:
+                            input.form-control(type="text", id="email", placeholder="example@post.com")
+                        p(style="display: inline-block;") Телефон:
+                            input.form-control(type="text", id="phone", placeholder="+380970000000")
+                    .form-group
+                        button.btn.btn-success(onclick="checkInputs()") Зберегти
+
+                p#err(style="display: none; text-align: center;") Не всі поля заповнено
+        include ./includes/footer.pug

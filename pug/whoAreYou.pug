@@ -1,0 +1,80 @@
+html(lang="uk")
+    include ./includes/head.pug
+    body
+        include ./includes/header.pug
+        .container
+            .col-lg-8.offset-lg-2
+                #panel
+                    h1(style="color: #fff;") Хто ви?
+                    .row
+                        .col-6
+                            img(src="../img/settings.png", alt="asas")
+                            br
+                            button.btn.btn-primary(onclick="clickTeacher()") Я вчитель
+                        .col-6
+                            img(src="../img/settings.png", alt="asdsdas")
+                            br
+                            button.btn.btn-primary(onclick="clickPupil()") Я учень
+                    
+                #panel-pupil.form
+                    h1(style="color: #fff;") Розкажіть про себе
+                    .row
+                        .col-5.offset-1
+                            label Введіть ім'я:
+                            input.form-control(type="text", id="name")
+                            label Введіть прізвище:
+                            input.form-control(type="text", id="surname")
+                            label Введіть країну:
+                            input.form-control(type="text", id="country")
+                        .col-5
+                            label Введіть місто:
+                            input.form-control(type="text", id="city")
+                            label Введіть E-mail:
+                            input.form-control(type="text", id="email")
+                            label Введіть телефон:
+                            input.form-control(type="text", id="phone")
+                    .row
+                        .col
+                            .form-group
+                                button.btn.btn-success(onclick="checkInputs()") Зберегти
+
+                p#err(style="display: none; text-align: center;") Не всі поля заповнено
+
+                #panel-teacher.form
+                    h1(style="color: #fff;") Розкажіть про себе
+                    .row
+                        .col-5.offset-1
+                            label Введіть ім'я:
+                            input.form-control(type="text", id="name")
+                            label Введіть прізвище:
+                            input.form-control(type="text", id="surname")
+                            label Введіть країну:
+                            input.form-control(type="text", id="country")
+                        .col-5
+                            label Введіть місто:
+                            input.form-control(type="text", id="city")
+                            label Введіть E-mail:
+                            input.form-control(type="text", id="email")
+                            label Введіть телефон:
+                            input.form-control(type="text", id="phone")
+                    .row
+                        .col
+                            .form-group
+                                button.btn.btn-success(onclick="clickTeacher()") Дальше
+
+                p#err(style="display: none; text-align: center;") Не всі поля заповнено
+                
+                #panel-teacher-2.form
+                    h1(style="color: #fff;") Розкажіть про себе
+                    .row
+                        .col
+                            textarea#desc(name="", cols="30", rows="10")
+                    .row
+                        .col
+                            .form-group
+                                button.btn.btn-success(onclick="checkInputs()") Зберегти 
+
+                p#err(style="display: none; text-align: center;") Не всі поля заповнено
+
+
+        include ./includes/footer.pug

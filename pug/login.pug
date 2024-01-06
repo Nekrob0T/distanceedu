@@ -1,0 +1,19 @@
+html(lang="uk")
+    include ./includes/head.pug
+    body
+        h1 Вхід у систему
+        .container
+            .col-lg-6.offset-lg-3.col-8.offset-2
+                .form
+                    .form-group
+                        label E-mail
+                        input.form-control(type="email", name="email", placeholder="E-mail")
+                    .form-group
+                        label Пароль
+                        input.form-control(type="password", name="pass", placeholder="Пароль")
+                    .form-group
+                        button.btn.btn-success(onclick="checkInputs()") Ввійти
+                        a(href="reg.html")
+                
+                p#err(style="display: none; text-align: center;") Не всі поля заповнено
+        include ./includes/footer.pug

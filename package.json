@@ -1,0 +1,14 @@
+{
+  "name": "siteforman",
+  "version": "1.0.0",
+  "description": "An educational site for MAN in Lviv",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kindii Vitalii",
+  "license": "ISC",
+  "dependencies": {
+    "pug": "^2.0.4"
+  }
+}
